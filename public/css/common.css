@@ -24,7 +24,7 @@ body {
 }
 
 #footer {
-	position: fixed;
+	margin-left: 50px;
 	bottom: 30px;
 	width: 90%;
 }
@@ -32,3 +32,22 @@ body {
 .read_manga {
 	text-align: center;
 }
+
+.twitter, .facebook {
+	visibility: hidden;
+	text-align: center;
+}
+
+#twitter-widget-1 {
+	margin-right: 10px;
+}
+
+.facebook {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.fb-like {
+	margin-right: 10px;
+}
+
