@@ -1,0 +1,19 @@
+.twitter {
+	display: inline;
+	margin-right: 5px;
+}
+
+.facebook {
+	display: inline;
+	margin-left: 5px;
+}
+
+.twitter img, .facebook img {
+	width: 50px;
+}
+
+#footer {
+	margin: 0 auto;
+	text-align: center;
+	display: none;
+}

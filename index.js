@@ -3,10 +3,7 @@ let read = require("./controllers/read");
 let bodyParser = require("body-parser");
 let express = require("express");
 let request = require("request");
-let port = {
-	http: 80,
-	ssl: 443
-};
+let port = 55003;
 
 app = express();
 app.disable("x-powered-by");
@@ -27,17 +24,6 @@ let errorHandler = (err, req, res, next) => {
 };
 app.use(errorHandler);
 
-/**
- * Notice: You SHOULD RUN "sudo rm -rf ~/letsencrypt/etc/" when you modify here
- */
-// require('greenlock-express').create({ 
-//	 server: 'https://acme-v01.api.letsencrypt.org/directory',
-//	 email: 'jiyu@midori.fun',
-//	 agreeTos: true,
-//	 approveDomains: [ 'midori.fun' ],
-//	 app: app
-// }).listen(port.http, port.ssl);
-
-app.listen(port.http, () => {
-	console.log(`(http) listen on :${port.http}`);
+app.listen(port, () => {
+	console.log(`(http) listen on :${port}`);
 });

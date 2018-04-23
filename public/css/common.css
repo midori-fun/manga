@@ -17,25 +17,26 @@ h6 {
   font-size: 1rem;
 }
 
-
 body {
-	font-size: 2.8rem;
+	font-size: 2rem;
 	background-color: #e6ffe6
-}
-
-#footer {
-	margin-left: 50px;
-	bottom: 30px;
-	width: 90%;
 }
 
 .read_manga {
 	text-align: center;
 }
 
-.twitter, .facebook {
-	visibility: hidden;
-	text-align: center;
+a:link {
+	color: #068900
+}
+a:visited {
+	color: #015400
+}
+a:hover {
+	color: #068900
+}
+a:active {
+	color: #068900
 }
 
 #twitter-widget-1 {
@@ -50,4 +51,3 @@ body {
 .fb-like {
 	margin-right: 10px;
 }
-

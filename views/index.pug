@@ -1,6 +1,10 @@
 extends layout.pug
 
 block content
+	title Green Chain
+	meta(property="og:title" content="Green Chain")
+
+	link(rel="stylesheet" href="/css/index.css")
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js")
 	.container
 		.row
@@ -13,7 +17,6 @@ block content
 				a(href="/block/1") block 1
 				//- a(href="/block/2") block 2
 		.row#footer
-			.col-md-12
 				hr
 				.donation
 					h4 Donation

@@ -1,41 +1,46 @@
 extends layout.pug
 
 block content
+	meta(property="og:image" content="https://midori.fun"+img_urls[0])
+
+	script.
+		let block = location.href.match(/(\d+)$/)[0];
+		document.write(`<title>Green Chain | Block ${block}</title>`);
+		document.write(`<meta property="og:title" content="Green Chain ${block}"/>`);
+
+	link(rel="stylesheet" href="/css/read.css")
 	script.
 		$(function() {
 			$.getScript("/js/viewer.js");
 			$.getScript("/js/scroll.js");
-			$("img").attr("src", function() {
-				return $(this).attr("data");
-			});
-			$(".twitter,.facebook").css("visibility", "");
+			$.getScript("/js/sns.js");
+			$.getScript("/js/lazy_load.js");
+			setTimeout(function() {
+				$("#footer").css("display", "block");
+			}, 1000);
 		});
 
 	body
 		.read_manga
 			each url, index in img_urls
-				div(id="page_"+index)
-					a(href="#page_"+(index+1))
-						img.lazy(data=url)
+				.not_displayed(id="page_"+index)
+					if(index < 3)
+						a(href="#page_"+(index+1))
+							img(src=url)
+					else if(index == img_urls.length - 1)
+						img(data=url)
+					else
+						a(href="#page_"+(index+1))
+							img(data=url)
 		#footer
 			hr
-			.twitter
-				a.twitter-share-button(href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false")
-					| つぶやく
-				a.twitter-follow-button(href="https://twitter.com/fkazuja?ref_src=twsrc%5Etfw" data-show-count="false")
-					| フォロー
-				script(async src="https://platform.twitter.com/widgets.js" charset="utf-8")
-			.facebook
-				#fb-root
-				script.
-					(function(d, s, id) {
-						var js, fjs = d.getElementsByTagName(s)[0];
-						if (d.getElementById(id)) return;
-						js = d.createElement(s); js.id = id;
-						js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.12&appId=372439006601240&autoLogAppEvents=1';
-						fjs.parentNode.insertBefore(js, fjs);
-					}(document, 'script', 'facebook-jssdk'));
-				.fb-like(data-href="http://midori.fun/block/1" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false")
-				.fb-share-button(data-href="http://midori.fun/block/1" data-layout="button_count" data-size="small" data-mobile-iframe="true")
-					a.fb-xfbml-parse-ignore(target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fmidori.fun%2Fblock%2F1&amp;src=sdkpreparse")
-						| シェア
+			.sns
+				- let text = "Green Chain, block 1";
+				.twitter
+					a(href="" target="_blank" title="Share on Twitter")
+						img(src="/img/twitter.png" alt="twitter")
+				.facebook
+					a(href="" target="_blank" title="Share on Facebook")
+						img(src="/img/facebook.png" alt="facebook")
+			.to_top
+				a(href="/") Back to top page
