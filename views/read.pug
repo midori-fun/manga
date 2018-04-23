@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+	script.
+		$(function() {
+			$.getScript("/js/viewer.js");
+			$.getScript("/js/scroll.js");
+			$("img").attr("src", function() {
+				return $(this).attr("data");
+			});
+		});
+
+	body
+		.read_manga
+			each url, index in img_urls
+				div(id="page_"+index)
+					a(href="#page_"+(index+1))
+						img.lazy(data=url)

@@ -1,0 +1,26 @@
+extends layout.pug
+
+block content
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js")
+	.container
+		.row
+			.col-md-12
+				h2 Green Chain
+				p A blockchain manga
+		.row
+			.col-md-12
+				h3 Read manga
+				a(href="/block/1") block 1
+				//- a(href="/block/2") block 2
+		.row#footer
+			.col-md-12
+				hr
+				.donation
+					h4 Donation
+					.bitcoin_addr bitcoin: mzE1NKoKpUSJgSXVNeRNHz2Kgb4WFkLmFK
+						button(data-clipboard-text="mzE1NKoKpUSJgSXVNeRNHz2Kgb4WFkLmFK")
+							img(src="/img/clippy.svg" width=12 alt="Copy on Clipboard")
+					.ethereum_addr ethereum: a949f0397167446c805f9fa957a19aa750e4390c
+						button(data-clipboard-text="a949f0397167446c805f9fa957a19aa750e4390c")
+							img(src="/img/clippy.svg" width=12 alt="Copy on Clipboard")
+				a(href="mailto:info@midori.fun") contact author
