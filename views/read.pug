@@ -19,7 +19,8 @@ block content
 			each url, index in img_urls
 				.not_displayed(id="page_"+index)
 					if(index == img_urls.length - 1)
-						img(data=url)
+						a(href="#footer")
+							img(data=url)
 					else
 						a(href="#page_"+(index+1))
 							img(data=url)
