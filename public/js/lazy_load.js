@@ -6,10 +6,10 @@ for(let i=0; i<img_len; i++){
 	all_img[i].addEventListener("load",loadFunc);
 	$(".read_manga img").eq(0).attr("src", function() {
 		return $(this).attr("data");
-	}).removeAttr();
+	}).css("display", "none").fadeIn(500);
 	$(".read_manga img").eq(1).attr("src", function() {
 		return $(this).attr("data");
-	}).removeAttr();
+	}).css("display", "none");
 }
 
 function loadFunc() {
@@ -22,6 +22,8 @@ function loadFunc() {
 
 $(window).on("scroll", function() {
 	let targets = $('.not_displayed');
+	targets.find("img").css("display", "none");
+
 	targets.each(function(i, e) {
 		let t = $(e).offset().top;
 		let nb_page = +$(e).attr("id").match(/(\d+)$/)[0];
@@ -29,9 +31,11 @@ $(window).on("scroll", function() {
 
 		if($(window).scrollTop() > p) {
 			$(e).removeClass("not_displayed");
+			$(e).find("img").css("display", "");
+
 			$(`#page_${nb_page+1} img, #page_${nb_page+2} img`).attr("src", function() {
 				return $(this).attr("data");
-			}).removeAttr("data");
+			});
 		}
 	});
 });
