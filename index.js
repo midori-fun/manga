@@ -1,3 +1,4 @@
+process.title = "manga";
 let _async = require("./libs/async");
 let read = require("./controllers/read");
 let bodyParser = require("body-parser");

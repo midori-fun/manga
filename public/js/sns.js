@@ -4,7 +4,7 @@ function setSnsShare(shareUrl, description) {
 }
 
 function setTwitterLink(shareSelector, shareUrl, description) {
-	$(shareSelector).attr("href", "https://twitter.com/share?shareUrl=" + shareUrl + "&text=" + encodeURIComponent(description));
+	$(shareSelector).attr("href", "https://twitter.com/intent/tweet?text=" + encodeURIComponent(description + "\n" + shareUrl + "\n" + t_id + " #GreenChain #Blockchain"));
 	setShareEvent(shareSelector, 'Twitter', shareUrl);
 }
 
@@ -15,7 +15,7 @@ function setFacebookLink(shareSelector, shareUrl, description) {
 
 function setShareEvent(selector, snsName, shareUrl) {
 	$(selector).on('click', function(e){
-			var current = this;
+			let current = this;
 			ga('send', 'social', snsName, 'share', shareUrl, {
 					'nonInteraction': 1
 			});

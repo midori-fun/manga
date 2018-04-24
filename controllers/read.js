@@ -12,5 +12,9 @@ exports.read = (req, res, next) => {
 		return next();
 	}
 
-	res.render(`read`, { img_urls: img_urls });
+	res.render(`read`, {
+		img_urls: img_urls,
+		id: req.params.id,
+		og_image: img_urls[0]
+	});
 };

@@ -1,33 +1,24 @@
 extends layout.pug
 
 block content
-	meta(property="og:image" content="https://midori.fun"+img_urls[0])
-
-	script.
-		let block = location.href.match(/(\d+)$/)[0];
-		document.write(`<title>Green Chain | Block ${block}</title>`);
-		document.write(`<meta property="og:title" content="Green Chain ${block}"/>`);
+	meta(property="og:title" content="Green Chain " + id)
+	title Green Chain #{id}
 
 	link(rel="stylesheet" href="/css/read.css")
+
 	script.
 		$(function() {
 			$.getScript("/js/viewer.js");
 			$.getScript("/js/scroll.js");
 			$.getScript("/js/sns.js");
 			$.getScript("/js/lazy_load.js");
-			setTimeout(function() {
-				$("#footer").css("display", "block");
-			}, 1000);
 		});
 
 	body
 		.read_manga
 			each url, index in img_urls
 				.not_displayed(id="page_"+index)
-					if(index < 3)
-						a(href="#page_"+(index+1))
-							img(src=url)
-					else if(index == img_urls.length - 1)
+					if(index == img_urls.length - 1)
 						img(data=url)
 					else
 						a(href="#page_"+(index+1))

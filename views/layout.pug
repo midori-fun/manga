@@ -11,14 +11,19 @@ html
 		meta(property="og:type" content="book")
 		meta(name="description" content="ブロックチェーンを題材とした女の子が活躍するファンタジー漫画です。")
 		meta(property="og:description" content="ブロックチェーンを題材とした女の子が活躍するファンタジー漫画です。")
+		meta(property="og:image" content=og_image)
+		link(rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32")
 		script.
+			let t_id;
 			if(language === "ja-JP") {
 				let ga = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118046550-1"></scr' + 'ipt><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-118046550-1");</scr' + 'ipt>';
-				document.write('<meta name="twitter:site" content="@fkazuja">');
+				t_id = "@fkazuja";
+				document.write('<meta name="twitter:site" content="' + t_id +'">');
 				document.write(ga);
 			} else {
 				let ga = '<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118046550-2"></scr' + 'ipt><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-118046550-2");</scr' + 'ipt>';
-				document.write('<meta name="twitter:site" content="@fkazuen">');
+				t_id = "@fkazuen";
+				document.write('<meta name="twitter:site" content="' + t_id +'">');
 				document.write(ga);
 			}
 		meta(name="twitter:card" content="summary")
