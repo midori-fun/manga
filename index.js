@@ -18,6 +18,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/block/:id", _async.function(read.read));
+app.get("/block/:id/:lang", _async.function(read.read));
 
 let errorHandler = (err, req, res, next) => {
 		console.log(err);

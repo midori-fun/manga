@@ -12,13 +12,14 @@
     "greenlock-express": "^2.0.12",
     "jsdom": "^11.7.0",
     "json-rpc2": "^1.0.2",
+    "npm": "^6.0.0",
     "pug": "^2.0.3",
     "pug-cli": "^1.0.0-alpha6",
     "request": "^2.85.0"
   },
   "scripts": {
-		"start": "node index.js",
-		"stop": "pkill --signal SIGINT manga"
+    "start": "node index.js",
+    "stop": "pkill -f manga"
   },
   "devDependencies": {
     "browserify": "^16.2.0"

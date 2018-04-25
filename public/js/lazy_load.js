@@ -21,7 +21,7 @@ function loadFunc() {
 	$(this).fadeIn(500);
 	loaded_counter++;
 	if(img_len === loaded_counter){
-		$("#footer").css("display", "block");
+		$("#footer, #credit").css("display", "block");
 	}
 }
 

@@ -9,9 +9,14 @@ html
 		link(rel="stylesheet" href="/css/common.css")
 		meta(property="og:url" content="http://midori.fun/block/1")
 		meta(property="og:type" content="book")
-		meta(name="description" content="ブロックチェーンを題材とした女の子が活躍するファンタジー漫画です。")
-		meta(property="og:description" content="ブロックチェーンを題材とした女の子が活躍するファンタジー漫画です。")
-		meta(property="og:image" content=og_image)
+		if(language == "ja")
+			meta(name="description" content="ブロックチェーンを題材とした女の子が活躍するファンタジー漫画です。")
+			meta(property="og:description" content="ブロックチェーンを題材とした女の子が活躍するファンタジー漫画です。")
+		else
+			meta(name="description" content="Blockchain x fantasy x girls")
+			meta(property="og:description" content="Blockchain x fantasy x girls")
+		//- meta(property="og:image" content=og_image)
+		meta(property="og:image" content="https://midori.fun/img/blocks/00001/ja/10000.jpg")
 		link(rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32")
 		script.
 			let t_id;

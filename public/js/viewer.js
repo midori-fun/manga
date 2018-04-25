@@ -16,7 +16,7 @@ function resize() {
 	}
 
 	$(".read_manga img").attr("style", style);
-}
+}	
 
 $(window).on("resize", resize);
 

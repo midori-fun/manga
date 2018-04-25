@@ -3,7 +3,6 @@ extends layout.pug
 block content
 	meta(property="og:title" content="Green Chain " + id)
 	title Green Chain #{id}
-
 	link(rel="stylesheet" href="/css/read.css")
 
 	script.
@@ -15,6 +14,14 @@ block content
 		});
 
 	body
+		.language
+			if(language == "ja")
+				span.en
+					a(href="./en") Read in English
+			else
+				span.jp 
+					a(href="./ja") 日本語で読む
+
 		.read_manga
 			each url, index in img_urls
 				.not_displayed(id="page_"+index)
@@ -24,6 +31,9 @@ block content
 					else
 						a(href="#page_"+(index+1))
 							img(data=url)
+			if(language == "en")
+				#credit Translated by: 
+					a(href="http://www.thunderwolflives.com/" target="_blank") Andrew Bush
 		#footer
 			hr
 			.sns
