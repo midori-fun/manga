@@ -18,12 +18,8 @@ h6 {
 }
 
 body {
-	font-size: 2rem;
+	font-size: 3rem;
 	background-color: #e6ffe6
-}
-
-.read_manga {
-	text-align: center;
 }
 
 a:link {

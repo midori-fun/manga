@@ -1,4 +1,19 @@
 #footer {
-	position: fixed;
-	bottom: 30px;
+	margin-bottom: 3vh;
+}
+
+.switcher {
+	margin-top: 5vh;
+}
+
+.language {
+	width: 30%;
+	font-size: 5vw;
+	margin-top: 1vw;
+}
+
+.latest {
+	width: 50%;
+	font-size: 7vw;
+	margin-top: 1vw;
 }

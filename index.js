@@ -1,5 +1,6 @@
 process.title = "manga";
 let _async = require("./libs/async");
+let index = require("./controllers/index");
 let read = require("./controllers/read");
 let bodyParser = require("body-parser");
 let express = require("express");
@@ -13,9 +14,8 @@ app.set("view engine", "pug");
 app.set("views", __dirname + "/views");
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-	res.render('index');
-});
+app.get("/", _async.function(index.index));
+app.get("/:lang", _async.function(index.index));
 
 app.get("/block/:id", _async.function(read.read));
 app.get("/block/:id/:lang", _async.function(read.read));

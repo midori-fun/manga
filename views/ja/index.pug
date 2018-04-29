@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block content
+	title Green Chain
+	meta(property="og:title" content="Green Chain")
+
+	link(rel="stylesheet" href="/css/index.css")
+	.container
+		.row
+			.col-md-12
+				h2 Green Chain
+		hr
+		.row
+			.col-md-12
+				h3 クリックして漫画を読む
+				a.latest.btn.btn-success(href="./block/1/ja") ブロック１
+				//- button.first.btn.btn-success(type="button") Block 1
+				//- a(href="/block/2") block 1, block 2, block 3...
+			.switcher.col-md-12
+				h3 Switch language
+				a.language.btn.btn-default(href="./en") English
+		.row
+			.col-md-12#footer
+				hr
+				.donation
+					h4 寄付
+					.bitcoin_addr bitcoin: mzE1NKoKpUSJgSXVNeRNHz2Kgb4WFkLmFK
+					.ethereum_addr ethereum: a949f0397167446c805f9fa957a19aa750e4390c
+				a(href="mailto:info@midori.fun") 著者に連絡する
