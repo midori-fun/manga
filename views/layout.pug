@@ -1,5 +1,8 @@
 html
 	head
+		link(rel="manifest" href="/manifest.json")
+		meta(name="theme-color" content="green")
+		meta(name="google-site-verification" content="vskabC2K_gNi0VdlC_Q00-LFDmjt0RU2mGxAAnhehXw")
 		script(src="https://code.jquery.com/jquery-3.3.1.min.js")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous")
@@ -38,6 +41,15 @@ html
 					let id = $(this).attr("block");
 					location.href = "./block/" + id;
 				});
+
+				if ('serviceWorker' in navigator) {
+					navigator.serviceWorker.register("/js/serviceWorker.js")
+					.then(function(registration) {
+						console.log("serviceWorker registed.");
+					}).catch(function(error) {
+						console.warn("serviceWorker error.", error);
+					});
+				}
 			});
 	body
 		block content
