@@ -19,20 +19,26 @@ html
 		//- meta(property="og:image" content=og_image)
 		meta(property="og:image" content="https://midori.fun/img/blocks/00001/ja/10000.jpg")
 		link(rel="icon" type="image/png" href="/img/favicon.ico" sizes="32x32")
-		if(language == "ja")
-			script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-118046550-1")
-			script.
-				let t_id;
-				window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-118046550-1");
-				t_id = "@fkazuja";
-				document.write('<meta name="twitter:site" content="' + t_id +'">');
-		else
-			script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-118046550-2")
-			script.
-				let t_id;
-				window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-118046550-2");
-				t_id = "@fkazuen";
-				document.write('<meta name="twitter:site" content="' + t_id +'">');
+
+		//- Tag Manager
+		script.
+			(function(w,d,s,l,i){w[l]=w[l]||[];
+			w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+			var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-N82HB3H');
+
+		//- Analytics
+		script(async, src="https://www.googletagmanager.com/gtag/js?id=UA-123676187-1")
+		script.
+			let t_id;
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag("js", new Date());
+
+			gtag("config", "UA-123676187-1");
+			t_id = "@fkazuja";
+			document.write('<meta name="twitter:site" content="' + t_id +'">');
+
 		meta(name="twitter:card" content="summary")
 
 		script.
@@ -53,3 +59,5 @@ html
 			});
 	body
 		block content
+	noscript
+		iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-N82HB3H" height="0" width="0" style="display:none;visibility:hidden")
