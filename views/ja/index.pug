@@ -12,10 +12,14 @@ block content
 		hr
 		.row
 			.col-md-12
-				h3 クリックして漫画を読む
-				a.latest.btn.btn-success(href="./block/1/ja") ブロック１
-				//- button.first.btn.btn-success(type="button") Block 1
-				//- a(href="/block/2") block 1, block 2, block 3...
+				.latest
+					h3 最新エピソード
+					a.latest.btn.btn-success(href="./block/2/ja") 第２話
+				.old
+					h4 過去エピソード
+					a.btn.btn-success(href="./block/1/ja") 第１話
+					//- button.first.btn.btn-success(type="button") Block 1
+					//- a(href="/block/2") block 1, block 2, block 3...
 			.switcher.col-md-12
 				h3 Switch language
 				a.language.btn.btn-default(href="./en") English

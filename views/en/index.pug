@@ -12,10 +12,14 @@ block content
 		hr
 		.row
 			.col-md-12
-				h3 Click to read manga
-				a.latest.btn.btn-success(href="./block/1/en") Block 1
-				//- button.first.btn.btn-success(type="button") Block 1
-				//- a(href="/block/2") block 1, block 2, block 3...
+				.latest
+					h3 Click to read manga
+					a.latest.btn.btn-success(href="./block/2/en") Episode 2
+				.old
+					h4 Old episodes
+					a.btn.btn-success(href="./block/1/en") Episode 1
+					//- button.first.btn.btn-success(type="button") Block 1
+					//- a(href="/block/2") block 1, block 2, block 3...
 			.switcher.col-md-12
 				h3 言語切替
 				a.language.btn.btn-default(href="./ja") 日本語
