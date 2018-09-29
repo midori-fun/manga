@@ -4,6 +4,16 @@ block content
 	title Green Chain
 	meta(property="og:title" content="Green Chain")
 
+	script(src="https://cdn.onesignal.com/sdks/OneSignalSDK.js")
+	script.
+		var OneSignal = window.OneSignal || []
+		OneSignal.push(function() {
+			OneSignal.init({
+				appId: "073ae75c-c906-460b-9c29-e7417b6379e6"
+			})
+		})
+
+
 	link(rel="stylesheet" href="/css/index.css")
 	.container
 		.row
@@ -20,6 +30,8 @@ block content
 					a.btn.btn-success(href="./block/1/en") Episode 1
 					//- button.first.btn.btn-success(type="button") Block 1
 					//- a(href="/block/2") block 1, block 2, block 3...
+				.notify
+					.onesignal-customlink-container
 			.switcher.col-md-12
 				h3 言語切替
 				a.language.btn.btn-default(href="./ja") 日本語

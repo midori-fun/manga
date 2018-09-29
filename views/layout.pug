@@ -40,23 +40,6 @@ html
 			document.write('<meta name="twitter:site" content="' + t_id +'">');
 
 		meta(name="twitter:card" content="summary")
-
-		script.
-			$(function(){
-				$(".latest").on("click", function() {
-					let id = $(this).attr("block");
-					location.href = "./block/" + id;
-				});
-
-				if ('serviceWorker' in navigator) {
-					navigator.serviceWorker.register("/js/serviceWorker.js")
-					.then(function(registration) {
-						console.log("serviceWorker registed.");
-					}).catch(function(error) {
-						console.warn("serviceWorker error.", error);
-					});
-				}
-			});
 	body
 		block content
 	noscript

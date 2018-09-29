@@ -29,3 +29,11 @@
 	font-size: 2vw;
 	margin-top: 1vh;
 }
+
+.notify {
+	margin-top: 3vh;
+}
+
+.notify button {
+	height: 2vh;
+}

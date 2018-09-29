@@ -1,15 +1,4 @@
 {
-	"name": "Green Chain",
-	"short_name": "Green Chain",
-	"icons": [
-			{
-					"src": "/img/favicon.ico",
-					"sizes": "32x32",
-					"type": "image/png"
-			}
-	],
-	"start_url": "/",
-	"display": "standalone",
-	"theme_color": "green",
-	"gcm_sender_id": "865108266854"
+  "gcm_sender_id": "482941778795",
+  "gcm_sender_id_comment": "Do not change the GCM Sender ID"
 }

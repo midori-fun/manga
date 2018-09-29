@@ -1,12 +1,11 @@
 function resize() {
 	let w = window.innerWidth ? window.innerWidth: $(window).width();
 	let h = window.innerHeight ? window.innerHeight: $(window).height();
-	let css;
 	let ua = navigator.userAgent;
 
 	if(ua.includes("iPad") || ua.includes("Android") && !ua.includes('Mobile')) {
 		// Tablet
-		style = "width: 80vw; height: auto; margin: 2vh auto;";	
+		style = "width: 80vw; height: auto; margin: 2vh auto;";
 	} else if(w > h) {
 		// width is longer than height (typically PC)
 		style = "width: auto; height: 94vh; margin: 2vh 10vw;";
@@ -16,7 +15,7 @@ function resize() {
 	}
 
 	$(".read_manga .pages img").attr("style", style);
-}	
+}
 
 $(window).on("resize", resize);
 
