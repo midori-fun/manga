@@ -1,5 +1,5 @@
-process.env.PORT = 9999
-process.title = "glot-server"
+process.env.PORT = 9998
+process.title = "gc-server"
 
 let createError = require('http-errors')
 let express = require('express')
@@ -9,20 +9,21 @@ let logger = require('morgan')
 let cors = require('cors')
 
 let blockRouter = require('./routes/block')
+let payRouter = require('./routes/pay')
 
 let app = express()
 
-let whitelist = ['http://localhost:8101', 'https://midori.fun']
-let corsOptions = {
-	origin: function (origin, callback) {
-		if (whitelist.indexOf(origin) !== -1) {
-			callback(null, true)
-		} else {
-			callback(new Error('Not allowed by CORS'))
-		}
-	}
-}
-app.use(cors(corsOptions))
+// let whitelist = ['http://localhost:8101', 'https://midori.fun']
+// let corsOptions = {
+// 	origin: function (origin, callback) {
+// 		if (whitelist.indexOf(origin) !== -1) {
+// 			callback(null, true)
+// 		} else {
+// 			callback(new Error('Not allowed by CORS'))
+// 		}
+// 	}
+// }
+// app.use(cors(corsOptions))
 
 app.use(logger('dev'))
 app.use(express.json())
@@ -31,6 +32,7 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/block', blockRouter)
+app.use('/pay', payRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
