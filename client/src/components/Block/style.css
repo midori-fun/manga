@@ -1,0 +1,42 @@
+li {
+	list-style: none;
+}
+
+#btn-notify {
+	display: inline-block !important;
+}
+
+#deposit_addr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+#prize {
+	margin-top: 20px;
+}
+
+.copy {
+	margin-top: 10px;
+}
+
+#balance {
+	margin-top: 20px;
+}
+
+.read_manga img {
+	width: 100%;
+}
+
+/* Vue Toast start */
+.toasted.bubble {
+	background-color: limegreen;
+	border-color: limegreen;
+}
+
+.toasted.outline {
+	background-color: #dc3545;
+	border-color: #dc3545;
+	color: white;
+}
+/* Vue Toast end */

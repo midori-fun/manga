@@ -1,0 +1,63 @@
+{
+  "name": "glot",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "stop": "pkill -f glot-client"
+  },
+  "dependencies": {
+    "@babel/core": "^7.0.1",
+    "axios": "^0.18.0",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "hash.js": "^1.1.5",
+    "jayson": "^2.0.6",
+    "jquery": "^1.9.1",
+    "npm": "^6.4.1",
+    "sha256": "^0.2.0",
+    "sync-mysql": "^3.0.1",
+    "sync-sql": "^1.0.2",
+    "vue": "^2.5.17",
+    "vue-axios": "^2.1.3",
+    "vue-clipboard2": "^0.2.1",
+    "vue-i18n": "^8.0.0",
+    "vue-loading-overlay": "^2.2.2",
+    "vue-router": "^3.0.1",
+    "vue-toasted": "^1.1.24",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@kazupon/vue-i18n-loader": "^0.3.0",
+    "@vue/cli-plugin-babel": "^3.0.1",
+    "@vue/cli-plugin-eslint": "^3.0.1",
+    "@vue/cli-service": "^3.0.1",
+    "vue-cli-plugin-i18n": "^0.5.0",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

@@ -1,0 +1,23 @@
+<div>
+	<b-container v-show="loaded">
+		<b-row>
+			<b-col>
+				<div class="loading">Loading...</div>
+				<div class="main">
+					<div class="language"></div>
+					<div class="read_manga" ref="read_manga">
+						<img v-if="visible[0]" v-bind:src="'data:image/jpeg;base64,' + img" ref="page_1">
+					</div>
+					<div id="footer">
+						<hr />
+						<div class="sns">
+							<div class="twitter"><a href="" target="_blank" title="Share on Twitter"><img src="/img/twitter.png" alt="twitter" /></a></div>
+							<div class="facebook"><a href="" target="_blank" title="Share on Facebook"><img src="/img/facebook.png" alt="facebook" /></a></div>
+						</div>
+						<div class="to_top" v-on:scroll="alert(1)"><a href="/">Back to top page</a></div>
+					</div>
+				</div>
+			</b-col>
+		</b-row>
+	</b-container>
+</div>

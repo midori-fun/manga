@@ -1,0 +1,41 @@
+#footer {
+	margin-bottom: 3vh;
+}
+
+.switcher {
+	margin-top: 5vh;
+}
+
+.language {
+	width: 30%;
+	font-size: 5vw;
+	margin-top: 1vw;
+}
+
+.old {
+	margin-top: 3vh;
+}
+
+.latest a {
+	color: white !important;
+	width: 50%;
+	font-size: 6vw;
+	margin-top: 1vh;
+	max-width: 350px;
+}
+
+.old a {
+	color: white !important;
+	width: 20%;
+	max-width: 150px;
+	font-size: 3vw;
+	margin-top: 1vh;
+}
+
+.notify {
+	margin-top: 3vh;
+}
+
+.notify button {
+	height: 2vh;
+}

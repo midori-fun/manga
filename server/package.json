@@ -1,0 +1,25 @@
+{
+  "name": "manga-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "stop": "pkill -f manga-server"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "firebase-admin": "^6.0.0",
+    "fs": "0.0.1-security",
+    "greenlock-express": "^2.4.6",
+    "hash.js": "^1.1.5",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "mysql": "^2.16.0",
+    "path": "^0.12.7",
+    "sha256": "^0.2.0"
+  }
+}
